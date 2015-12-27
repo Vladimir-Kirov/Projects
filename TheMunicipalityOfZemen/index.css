@@ -1,0 +1,173 @@
+body, html {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	background: #e5e5e5;
+	color: black;
+	font-size: 0.8em;
+	font-family: Verdana;
+}
+
+#main {
+    width: 750px;
+    margin: 0 auto;
+    padding:0;
+    background: white url('./images/main.gif') left top repeat-y;
+    height: auto;
+	min-height: 100%;
+	_height: 100%;
+	position: relative;
+}
+
+#head {
+	margin:0;
+	padding: 0;
+	width: 100%;
+	height: 120px;
+	background: transparent url('./images/head.gif') left top no-repeat;
+}
+#head h1 {
+	margin: 0;
+	padding: 0;
+	width: auto;
+	font-family: 'Trebuchet MS', Arial, sans-serif;
+	font-size: 24px;
+	text-transform: uppercase;
+	color: #898989;
+	position: absolute;
+	left: 65px;
+	top: 65px;
+	letter-spacing: 0.2em;
+}
+
+#head h1 a, #head h1 a:link {
+	color: #898989;
+	text-decoration: none;
+}
+
+#menu {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 181px;
+	background-color: transparent;
+	background-image: url('./images/church.jpg');
+	background-position: 20px 0;
+	background-repeat: no-repeat;
+	color: white;
+	filter: progid:DXImageTransform.Microsoft.Fade(Overlap=1.00);
+}
+#menu ul {
+	margin: 0;
+	padding: 112px 0 0 0;
+	width: 170px;
+	height: 181px;
+	background: #828282 url('./images/gerb.gif') 57px 15px no-repeat;
+	list-style-type: none;
+	position: absolute;
+	right: 60px;
+	top: 8px;
+}
+#menu ul li {
+	margin: 0 0 1px 0;
+	padding: 0;
+	height: 24px;
+	line-height: 24px;
+}
+#menu ul li a, #menu ul li a:link {
+	display: block;
+	margin: 0;
+	padding: 0 8px;
+	height: 24px;
+	color: white;
+	text-decoration: none;
+}
+
+#mainmenu {
+	position: absolute;
+	left: 20px;
+	top: 100px;
+	width: 500px;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	overflow: hidden;
+}
+
+#mainmenu li {
+	display: block;
+	margin: 0;
+	padding: 0;
+	float: right;
+	line-height: 20px;
+	font-size: 1.1em;
+	font-weight: bold;
+	color: #5F5F5F;
+	background: transparent url('./images/mainmenu_bg.gif') right center no-repeat;
+	position: relative;
+	left: 3px;
+}
+
+#mainmenu li a, #mainmenu li a:link {
+	display: block;
+	margin: 0 3px;
+	padding: 0 3px;
+	color: #5F5F5F;
+	text-decoration: none;
+}
+#content {
+	margin: 20px;
+	padding: 0 45px 40px 45px;
+}
+
+#content b, #content strong {
+	font-weight: bold;
+	color: #898989;
+	font-size: 1.2em;
+}
+#content p {
+	margin: 1.5em 0;
+}
+#content a, #content a:link {
+	color: #898989;
+}
+#content h1,
+#content h2,
+#content h3,
+#content h4,
+#content h5,
+#content h6 {
+	color: #898989;
+	font-weight: bold;
+	font-size: 1.2em;
+	margin: 10çé 0;
+	padding: 0;
+}
+#content h1 {
+	font-size: 1.7em;
+}
+#content h2 {
+	font-size: 1.6em;
+}
+#content h3 {
+	font-size: 1.5em;
+}
+#content h4 {
+	font-size: 1.4em;
+}
+#content h5 {
+	font-size: 10px;
+	font-weight: normal;
+	text-align: center;
+}
+
+#footer {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 40px;
+	background: red url('./images/footer.gif') left bottom no-repeat;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
