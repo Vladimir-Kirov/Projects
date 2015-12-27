@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<title>Multilevel Materialized Path Lists</title>
+<style>
+ol.multilevel {
+	counter-reset: item;
+}
+ol.multilevel li {
+	display: block;
+	position: relative;
+}
+ol.multilevel > li:before {
+	content: counters(item, ".", decimal) ".";
+	counter-increment: item;
+	margin-right: 100%;
+	position: absolute;
+	right: 10px;
+}
+</style>
+</head>
+<body>
+<ol class="multilevel">
+	<li>Първо
+		<ol class="multilevel">
+			<li>Първо</li>
+			<li>Второ</li>
+			<li>Трето</li>
+			<li>Четвърто</li>
+		</ol>
+	</li>
+	<li>Второ
+		<ol class="multilevel">
+			<li>Първо</li>
+			<li>Второ</li>
+			<li>Трето</li>
+			<li>Четвърто</li>
+		</ol>
+	</li>
+	<li>Трето
+		<ol class="multilevel">
+			<li>Първо</li>
+			<li>Второ</li>
+			<li>Трето</li>
+			<li>Четвърто</li>
+		</ol>
+	</li>
+	<li>Четвърто
+		<ol class="multilevel">
+			<li>Първо</li>
+			<li>Второ</li>
+			<li>Трето</li>
+			<li>Четвърто</li>
+		</ol>
+	</li>
+</ol>
+</body>
+</html>

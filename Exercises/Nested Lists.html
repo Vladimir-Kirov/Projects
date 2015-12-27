@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<meta name="author" content="Vladimir Kirov">
+		<title>Nested Lists</title>
+		<style type="text/css">
+	    	#navList li { 
+			list-style-type: square; 
+		}
+	
+			#active li {
+			list-style-type: circle; 
+		}
+	
+			#next li {
+			list-style-type: disc; 
+		}
+
+
+		</style>
+		</head>
+
+	
+	 <body style="font-size: 18px; padding: 100px;">
+	 <!-- Първи пример -->
+	 <ol><b>I пример</b></ol>
+	
+	 <ol>
+	 	<li>първо
+ 	 		<ul>
+ 	 			<li>нещо</li>
+ 	 			<li>друго</li>
+ 	 			<li>различно</li>
+ 	 		</ul>
+	 	</li>
+	 	  <li>второ</li>
+	 	  <li>трето</li>
+	 </ol>
+
+	<ol><b>II пример</b></ol>
+
+	<h5>A Nested List</h5>
+
+  	<ul id="navList">
+    	<li><a href="#">Coffee</a></li>
+    	<li><a href="#">Tea</a>
+      	  <ul id="active">
+      	    <li>Black tea</li>
+    	    <li>Green tea
+      	 	  <ul id="next">
+      			 <li>China</li>
+      			 <li>Africa</li>
+      	      </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#">Milk</a></li>
+        <li><a href="#">Cappuccino</a></li>
+    </ul>
+
+
+
+	 </body>
+</html>
