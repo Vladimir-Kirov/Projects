@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>My Dynamic Table</title>
+ <meta charset="utf-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+ <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <table class="table table-striped table-bordered table-hover table-responsive">
+          <thead>
+            <tr>
+              <th>Firstname</th>
+              <th>Lastame</th>
+              <th>Email address</th>
+            </tr>
+          </thead>
+          <tbody id="tb">
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="col-md-4">
+    <!--
+       <form>
+         <div class="form-group">
+          <label for="firstname">Enter Your Firstname</label>
+          <input type="text" name="firstname" class="form-control" id="firstname" class="control" placeholder="Enter Your Firstname">
+        </div>
+        <div class="form-group">
+          <label for="lastname">Enter Your Lastname</label>
+          <input type="text" name="lastname" class="form-control" id="lastname"  class="control" placeholder="Enter Your Lastname">
+        </div>
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <input type="text" name="email" class="form-control" id="email"  class="control" placeholder="Enter Email address">
+        </div>
+        <input type="submit" name="submit" class="btn btn-default" value="Submit">
+      </form>-->
+        <form>
+          <fieldset>
+            <legend>Personal Information</legend>
+            Enter Your Firstname: <br>
+            <input type="text" name="name" id="firstname" class="control">
+            <br>
+            Enter Your Lastname: <br>
+            <input type="text" name="telephone" id="lastname" class="control">
+            <br>
+            Email address: <br>
+            <input type="text" name="grad" id="email" class="control">
+            <br><br>
+            <input type="submit" name="submit" value="Изпрати">
+          </fieldset>
+        </form>
+    </div>
+</div>
+
+<script>
+  $(document).ready(function () {
+
+    var sent = false;
+
+    $('form').on('submit', function (event) {
+      event.preventDefault();
+
+      if(sent) {
+        return;
+      }
+
+      var firstname = $('#firstname').val();
+      var lastname = $('#lastname').val();
+      var email = $('#email').val();
+
+      var row = '<tr><td><a>' + firstname + '</a></td><td><a>' + lastname + '</a></td><td><a>' + email + '</a></td></tr>';
+
+      $('#tb').append(row);
+
+      sent = true; // Ако true го изпълнява 
+
+    });
+
+    $('.control').on('change', function () {
+      sent = false;
+    });
+
+    $('#tb').on('click', 'a', function () {
+      var text = $(this).html();
+      // console.log(this);
+      $(this).parent().html('<input type="text" value="' + text + '">');
+    });
+
+
+    $('#tb').on('change', 'input', function () {
+      var input = $(this).val();
+      $(this).parent().html('<a>' + input + '</a>');
+    });
+
+
+  });
+</script>
+</body>
+</html>
